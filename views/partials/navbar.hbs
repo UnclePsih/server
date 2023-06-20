@@ -1,0 +1,18 @@
+  <nav class="grey darken-2">
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo">Робот</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        {{#if isIndex}}
+            <li class="active"><a href="/">Управлять роботом</a></li>
+        {{else}}
+            <li><a href="/">Управлять роботом</a></li>
+        {{/if}}
+
+        {{#if isDownload}}
+            <li class="active"><a href="/download">Скачать видео</a></li>
+        {{else}}
+            <li><a href="/download">Скачать видео</a></li>
+        {{/if}}
+      </ul>
+    </div>
+  </nav>

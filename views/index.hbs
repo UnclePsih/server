@@ -1,0 +1,20 @@
+<div><canvas id="videoCanvas" width="430" height="240"></canvas></div>
+
+{{#if videoStart}}
+    <form action="/" method="POST">
+        <input  type="hidden" name="video" value=false>
+        <button type="submit" class="btn" disabled=true>PLAY</button>
+        <button type="submit" class="btn" >STOP</button>
+    </form>
+    <script type="text/javascript" src="libs/jsmpeg.min.js"></script>
+    <script type="text/javascript">
+      var canvas = document.getElementById('videoCanvas');
+      var player = new JSMpeg.Player("ws://localhost:9999", {canvas:canvas, autoplay:true });
+    </script>
+{{else}}
+    <form action="/" method="POST">
+        <input  type="hidden" name="video" value=true>
+        <button type="submit" class="btn" >PLAY</button>
+        <button type="submit" class="btn" disabled=true>STOP</button>
+    </form>
+{{/if}}
